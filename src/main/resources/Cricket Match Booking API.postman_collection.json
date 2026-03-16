@@ -1,0 +1,182 @@
+{
+  "info": {
+    "_postman_id": "f3737afc-4831-4146-bbd7-ed5b428a221d",
+    "name": "Cricket Match Booking API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52926326",
+    "_collection_link": "https://go.postman.co/collection/52926326-f3737afc-4831-4146-bbd7-ed5b428a221d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Add Match",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"matchDate\": \"2026-03-29\",\n  \"cityName\": \"Mumbai\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8090/admin/match",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "admin",
+                "match"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Audience by Date",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/admin/audience/2026-03-29",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "admin",
+                "audience",
+                "2026-03-29"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Seat Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/admin/seatstatus/2026-03-29",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "admin",
+                "seatstatus",
+                "2026-03-29"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Upcoming Matches (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/admin/upcomingmatches",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "admin",
+                "upcomingmatches"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Audience",
+      "item": [
+        {
+          "name": "Book Tickets",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Kavita\",\n  \"age\": 28,\n  \"gender\": \"F\",\n  \"matchDate\": \"2026-03-29\",\n  \"numberOfTickets\": 3\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8090/audience/book",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "audience",
+                "book"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Booking Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/audience/bookingstatus/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "audience",
+                "bookingstatus",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Upcoming Matches (Audience)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/audience/upcomingmatches",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "audience",
+                "upcomingmatches"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
